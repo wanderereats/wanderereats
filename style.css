@@ -1,0 +1,65 @@
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8f0;
+  color: #4a3f35;
+  margin: 0;
+  padding: 0 20px;
+}
+header {
+  background: #fbd9a0;
+  padding: 30px;
+  text-align: center;
+}
+nav {
+  background: #fce8c9;
+  padding: 12px;
+  text-align: center;
+}
+nav a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: #4a3f35;
+  font-weight: 600;
+}
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px 0;
+}
+section {
+  margin-top: 2.5em;
+}
+ul, ol {
+  padding-left: 20px;
+}
+.button {
+  background: #ec9f5b;
+  color: white;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1em;
+  font-weight: bold;
+}
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+label {
+  font-weight: 600;
+}
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
