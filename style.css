@@ -1,65 +1,100 @@
+/* ——— 0. FONT LOADING ——— */
+@font-face {
+  font-family: 'Agbalumo';
+  src: url('../fonts/Agbalumo.woff2') format('woff2'),
+       url('../fonts/Agbalumo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/PlayfairDisplay.woff2') format('woff2'),
+       url('../fonts/PlayfairDisplay.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'TT Chocolates';
+  src: url('../fonts/TTChocolates.woff2') format('woff2'),
+       url('../fonts/TTChocolates.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  background: #fff8f0;
-  color: #4a3f35;
+/* ——— 1. PALETTE & FONT VARIABLES ——— */
+:root {
+  --bg-color:      #6A7ABD;      /* blue background */
+  --accent-yellow: #FFF188;      /* headers & links */
+  --text-brown:    #C76120;      /* body text */
+
+  /* Font stacks – feel free to add fallbacks */
+  --font-header:    'Agbalumo', serif;
+  --font-subheader: 'Playfair Display', serif;
+  --font-body:      'TT Chocolates', sans-serif;
+}
+
+/* ——— 2. RESET & BASE ——— */
+* {
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
+body {
+  background-color: var(--bg-color);
+  color: var(--text-brown);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ——— 3. HEADER & NAV ——— */
 header {
-  background: #fbd9a0;
-  padding: 30px;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-nav {
-  background: #fce8c9;
-  padding: 12px;
-  text-align: center;
+header .logo {
+  height: 50px;
+  width: auto;
 }
-nav a {
-  margin: 0 20px;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+nav ul li a {
   text-decoration: none;
-  color: #4a3f35;
-  font-weight: 600;
-}
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px 0;
-}
-section {
-  margin-top: 2.5em;
-}
-ul, ol {
-  padding-left: 20px;
-}
-.button {
-  background: #ec9f5b;
-  color: white;
-  padding: 12px 28px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 1em;
+  color: var(--accent-yellow);
   font-weight: bold;
 }
-form {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+nav ul li a:hover {
+  opacity: 0.8;
 }
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+
+/* ——— 4. TYPOGRAPHY ——— */
+/* Main headers/titles */
+h1 {
+  font-family: var(--font-header);
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
 }
-label {
-  font-weight: 600;
+/* Subheaders/subtitles */
+h2, h3, h4 {
+  font-family: var(--font-subheader);
+  color: var(--accent-yellow);
+  margin-bottom: 0.5rem;
 }
-.contact-info {
-  text-align: center;
-  margin-top: 30px;
+/* Regular paragraphs & body text */
+p {
+  margin-bottom: 1rem;
+  color: var(--text-brown);
+  font-family: var(--font-body);
+}
+
+/* ——— 5. LAYOUT UTILITY ——— */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
