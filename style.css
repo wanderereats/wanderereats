@@ -1,25 +1,73 @@
 /* ——— 0. FONT LOADING ——— */
 @font-face {
   font-family: 'Agbalumo';
-  src: url('../fonts/Agbalumo.woff2') format('woff2'),
-       url('../fonts/Agbalumo.woff') format('woff');
+  src: url('../fonts/Agbalumo-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Playfair Display';
-  src: url('../fonts/PlayfairDisplay.woff2') format('woff2'),
-       url('../fonts/PlayfairDisplay.woff') format('woff');
-  font-weight: normal;
+  /* only loading the Bold weight since you only need it for subheads */
+  src: url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'TT Chocolates';
-  src: url('../fonts/TTChocolates.woff2') format('woff2'),
-       url('../fonts/TTChocolates.woff') format('woff');
+  /* using the Medium weight for your body text */
+  src: url('../fonts/TT Chocolates Trial Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
+
+/* ——— 1. PALETTE & FONT VARIABLES ——— */
+:root {
+  --bg-color:      #6A7ABD;      
+  --accent-yellow: #FFF188;      
+  --text-brown:    #C76120;      
+
+  --font-header:    'Agbalumo', serif;
+  --font-subheader: 'Playfair Display', serif;
+  --font-body:      'TT Chocolates', sans-serif;
+}
+
+/* ——— 2. RESET & BASE ——— */
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg-color);
+  color: var(--text-brown);
+  font-family: var(--font-body);
+  line-height:1.6;
+}
+
+/* ——— 3. HEADER & NAV ——— */
+/* … your existing header/nav styles … */
+
+/* ——— 4. TYPOGRAPHY ——— */
+/* Main titles */
+h1 {
+  font-family: var(--font-header);
+  color: var(--accent-yellow);
+  margin-bottom: .5rem;
+}
+/* Subheads */
+h2, h3, h4 {
+  font-family: var(--font-subheader);
+  color: var(--accent-yellow);
+  margin-bottom: .5rem;
+}
+/* Body text */
+p, li, span, a {
+  font-family: var(--font-body);
+  color: var(--text-brown);
+  margin-bottom: 1rem;
+}
+
+/* ——— 5. LAYOUT UTILITY ——— */
+/* … */
+
 
 /* ——— 1. PALETTE & FONT VARIABLES ——— */
 :root {
