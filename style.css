@@ -1,81 +1,31 @@
 /* ——— 0. FONT LOADING ——— */
 @font-face {
   font-family: 'Agbalumo';
-  src: url('../fonts/Agbalumo-Regular.ttf') format('truetype');
+  src: url('fonts/Agbalumo-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Playfair Display';
-  /* only loading the Bold weight since you only need it for subheads */
-  src: url('../fonts/PlayfairDisplay-Bold.ttf') format('truetype');
+  src: url('fonts/PlayfairDisplay-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'TT Chocolates';
-  /* using the Medium weight for your body text */
-  src: url('../fonts/TT Chocolates Trial Regular.otf') format('opentype');
+  src: url('fonts/TT Chocolates Trial Medium.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 /* ——— 1. PALETTE & FONT VARIABLES ——— */
 :root {
-  --bg-color:      #6A7ABD;      
-  --accent-yellow: #FFF188;      
-  --text-brown:    #C76120;      
+  --bg-color:      #6A7ABD;    /* blue background */
+  --accent-yellow: #FFF188;    /* headers & links */
+  --body-color:    #FFFFFF;    /* everything that was brown is now white */
 
-  --font-header:    'Agbalumo', serif;
-  --font-subheader: 'Playfair Display', serif;
-  --font-body:      'TT Chocolates', sans-serif;
-}
-
-/* ——— 2. RESET & BASE ——— */
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  background: var(--bg-color);
-  color: var(--text-brown);
-  font-family: var(--font-body);
-  line-height:1.6;
-}
-
-/* ——— 3. HEADER & NAV ——— */
-/* … your existing header/nav styles … */
-
-/* ——— 4. TYPOGRAPHY ——— */
-/* Main titles */
-h1 {
-  font-family: var(--font-header);
-  color: var(--accent-yellow);
-  margin-bottom: .5rem;
-}
-/* Subheads */
-h2, h3, h4 {
-  font-family: var(--font-subheader);
-  color: var(--accent-yellow);
-  margin-bottom: .5rem;
-}
-/* Body text */
-p, li, span, a {
-  font-family: var(--font-body);
-  color: var(--text-brown);
-  margin-bottom: 1rem;
-}
-
-/* ——— 5. LAYOUT UTILITY ——— */
-/* … */
-
-
-/* ——— 1. PALETTE & FONT VARIABLES ——— */
-:root {
-  --bg-color:      #6A7ABD;      /* blue background */
-  --accent-yellow: #FFF188;      /* headers & links */
-  --text-brown:    #C76120;      /* body text */
-
-  /* Font stacks – feel free to add fallbacks */
   --font-header:    'Agbalumo', serif;
   --font-subheader: 'Playfair Display', serif;
   --font-body:      'TT Chocolates', sans-serif;
@@ -89,14 +39,18 @@ p, li, span, a {
 }
 body {
   background-color: var(--bg-color);
-  color: var(--text-brown);
-  font-family: var(--font-body);
-  line-height: 1.6;
+  color:            var(--body-color);  /* white text now */
+  font-family:      var(--font-body);
+  line-height:      1.6;
 }
 
+/* make sure all body‐level text uses white */
+p, li, a, span {
+  color: var(--body-color);
+}
 /* ——— 3. HEADER & NAV ——— */
 header {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255,255,255,0.1);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -112,32 +66,33 @@ nav ul {
   gap: 1.5rem;
 }
 nav ul li a {
-  text-decoration: none;
   color: var(--accent-yellow);
+  text-decoration: none;
   font-weight: bold;
+  transition: opacity .2s;
 }
 nav ul li a:hover {
-  opacity: 0.8;
+  opacity: .8;
 }
 
 /* ——— 4. TYPOGRAPHY ——— */
-/* Main headers/titles */
+/* Main titles */
 h1 {
   font-family: var(--font-header);
-  color: var(--accent-yellow);
-  margin-bottom: 0.5rem;
+  color:       var(--accent-yellow);
+  margin-bottom: .5rem;
 }
-/* Subheaders/subtitles */
+/* Subheads */
 h2, h3, h4 {
   font-family: var(--font-subheader);
-  color: var(--accent-yellow);
-  margin-bottom: 0.5rem;
+  color:       var(--accent-yellow);
+  margin-bottom: .5rem;
 }
-/* Regular paragraphs & body text */
-p {
-  margin-bottom: 1rem;
-  color: var(--text-brown);
+/* Body text (paragraphs, list items, links, spans) */
+p, li, a, span {
   font-family: var(--font-body);
+  color:       var(--text-brown);
+  margin-bottom: 1rem;
 }
 
 /* ——— 5. LAYOUT UTILITY ——— */
