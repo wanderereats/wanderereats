@@ -144,3 +144,13 @@ p, li, a, span {
     margin-left: 0.5rem;
   }
 }
+/* MENU PAGE IMAGE FIX */
+/* 1. Target the menu image—add a class in your HTML like `<img src="…” class="menu-image">` */
+/* 2. Paste this at the very end of your style.css */
+
+.menu-image {
+  max-width: 100%;    /* never exceed its container’s width */
+  height: auto;       /* preserve original aspect ratio */
+  display: block;     /* make margin auto centering work */
+  margin: 0 auto;     /* center horizontally */
+}
