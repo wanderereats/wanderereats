@@ -30,18 +30,20 @@
 
     <!-- Contact form (adjust action/mailto as desired) -->
     <section class="contact-form">
-      <form action="mailto:contact@wanderereats.com" method="post" enctype="text/plain">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="Name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="Email" required />
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="Message" rows="6" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+      <form class="contact-form"
+      action="mailto:contact@wanderereats.com"
+      method="post"
+      enctype="text/plain">
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="From" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" name="Body" rows="4" required></textarea>
+  </div>
+  <button type="submit">Send</button>
+</form>
     </section>
 
     <!-- Direct contact details -->
