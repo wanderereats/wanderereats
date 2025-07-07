@@ -1,39 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Wanderer Eats</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanderer Cafe – Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Contact Us</h1>
-</header>
+  <!-- HEADER & NAVIGATION -->
+  <header>
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Wanderer Eats Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menus.html">Menus</a></li>
+        <li><a href="order.html">Online Ordering</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-<section>
-  <form action="mailto:contact@wanderereats.com" method="POST" enctype="text/plain">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
+  <!-- CONTACT FORM & INFO -->
+  <main class="container">
+    <h1>Contact Us</h1>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
+    <!-- Contact form (adjust action/mailto as desired) -->
+    <section class="contact-form">
+      <form action="mailto:contact@wanderereats.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Name" required />
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="Email" required />
 
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+        <label for="message">Message:</label>
+        <textarea id="message" name="Message" rows="6" required></textarea>
 
-<section class="contact-info">
-  <p><strong>Phone:</strong> (720) 722-2012</p>
-  <p><strong>Email:</strong> contact@wanderereats.com</p>
-</section>
-</main>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
+    <!-- Direct contact details -->
+    <section class="contact-info">
+      <h2>Our Info</h2>
+      <p>📍 Denver, CO 80211</p>
+      <p>✉️ <a href="mailto:contact@wanderereats.com">contact@wanderereats.com</a></p>
+      <p>📷 <a href="https://instagram.com/wanderercafes" target="_blank" rel="noopener">Follow Us on Instagram @wanderercafes</a></p>
+      <p>📘 <a href="https://facebook.com/wanderercafetruck" target="_blank" rel="noopener">Like Us on Facebook</a></p>
+      <p>📞 (720) 722-2012</p>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container">
+    &copy; 2025 Wanderer Cafe &bull; All rights reserved
+  </footer>
 </body>
 </html>
