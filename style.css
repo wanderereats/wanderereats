@@ -101,3 +101,46 @@ p, li, a, span {
   margin: 0 auto;
   padding: 2rem;
 }
+/* CONTACT FORM CSS */
+/* 1. Wrap each label+field in .form-group (as above) */
+/* 2. Base styles: mobile-first, column layout */
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.contact-form .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* allow shrinking on very narrow viewports */
+  min-width: 0;
+}
+
+/* 3. Switch to row layout on wider screens */
+@media (min-width: 600px) {
+  .contact-form .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact-form .form-group label {
+    /* fixed width for label column – adjust as needed */
+    width: 120px;
+    margin-bottom: 0;
+  }
+
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    /* take up remaining space */
+    flex: 1;
+    margin-left: 0.5rem;
+  }
+}
