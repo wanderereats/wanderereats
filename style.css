@@ -154,3 +154,33 @@ p, li, a, span {
   display: block;     /* make margin auto centering work */
   margin: 0 auto;     /* center horizontally */
 }
+/* ————————————————————————————————
+   MENU IMAGE EMBEDDING & CENTERING
+   ———————————————————————————————— */
+.menu-image {
+  max-width: 100%;    /* never overflow its container */
+  height: auto;       /* keep correct aspect ratio */
+  display: block;     /* so margin:0 auto will work */
+  margin: 1rem auto;  /* vertical breathing + horizontal center */
+}
+
+/* if you want the PDF frame slightly taller on desktop */
+@media (min-width: 600px) {
+  .menu-image[type="application/pdf"] {
+    height: 800px;
+  }
+}
+/* ————————————————————————————————
+   SITE LOGO (top-left)
+   ———————————————————————————————— */
+.site-logo {
+  display: block;
+  height: 40px;  /* adjust as you like */
+  width: auto;
+}
+
+/* optional: position inside your existing header/nav */
+.logo-link {
+  display: block;
+  padding: 0.5rem;   /* gives it some breathing room */
+}

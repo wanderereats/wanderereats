@@ -9,9 +9,13 @@
 <body>
   <!-- HEADER & NAVIGATION -->
   <header>
-    <a href="index.html">
-      <img src="assets/logo.png" alt="Wanderer Eats Logo" class="logo" />
-    </a>
+    <a href="index.html" class="logo-link">
+  <img 
+    src="assets/images/logo.png" 
+    alt="Wanderer Eats Logo" 
+    class="site-logo">
+</a>
+
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -31,12 +35,29 @@
       Place your menu file in assets/menu.pdf (or .jpg/.png)
       Adjust width as needed so it sits a bit narrower than the viewport.
     -->
-    <section class="menu-embed">
-      <!-- PDF embed fallback to image if browsers don’t render PDF -->
-       <img src="assets/menus/menu.pdf" alt="Our Menu PDF" class="menu-image">
-       <img src="assets/menus/menu.jpg" alt="Our Menu Image" class="menu-image">
-      </object>
-    </section>
+    <section class="menu-section">
+
+  <!-- PDF embed (will render in-browser, with a download fallback) -->
+  <object 
+    data="assets/menus/menu.pdf" 
+    type="application/pdf" 
+    class="menu-image"
+    width="100%" 
+    height="600">
+    <!-- fallback if browser won’t render PDFs -->
+    <p>
+      Can’t display PDF?  
+      <a href="assets/menus/menu.pdf" target="_blank">Download our menu (PDF)</a>.
+    </p>
+  </object>
+
+  <!-- JPG version (still responsive & centered) -->
+  <img 
+    src="assets/menus/menu.jpg" 
+    alt="Our Menu" 
+    class="menu-image">
+</section>
+
   </main>
 
   <!-- FOOTER -->
